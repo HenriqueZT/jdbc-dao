@@ -1,7 +1,7 @@
 package io.github.henriquezt;
 
-import Model.entities.Department;
-import Model.entities.Seller;
+import model.entities.Department;
+import model.entities.Seller;
 
 import java.util.Date;
 
