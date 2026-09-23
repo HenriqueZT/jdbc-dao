@@ -29,8 +29,14 @@ public class Main2 {
         }
 
         IO.println("\n=== Test 3: department insert ===");
-        Department newDep = new Department(null, "Internet");
+        Department newDep = new Department(null, "Backstage");
         depDao.insert(newDep);
         IO.println("inserted! New id = " + newDep.getId());
+
+        IO.println("\n=== Test 4: department update ===");
+        dep = depDao.findById(7);
+        dep.setName("Tiktok");
+        depDao.update(dep);
+        IO.println("Update completed!");
     }
 }
