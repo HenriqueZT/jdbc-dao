@@ -38,5 +38,13 @@ public class Main2 {
         dep.setName("Tiktok");
         depDao.update(dep);
         IO.println("Update completed!");
+
+        IO.println("\n=== Test 5: department delete ===");
+        IO.println("Enter id for delete test: ");
+        int id = sc.nextInt();
+        depDao.deleteById(id);
+        IO.println("Delete completed");
+
+        sc.close();
     }
 }
