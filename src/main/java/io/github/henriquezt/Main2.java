@@ -17,9 +17,20 @@ public class Main2 {
 
         DepartmentDao depDao = DaoFactory.createDepartmentDao();
 
-        IO.println("\n=== Test 1: Department findById ===");
+        IO.println("\n=== Test 1: department findById ===");
         Department dep = depDao.findById(3);
         IO.println(dep);
 
+        IO.println("\n=== Test 2: department findAll ===");
+        List<Department> list;
+        list = depDao.findAll();
+        for (Department obj : list) {
+            IO.println(obj);
+        }
+
+        IO.println("\n=== Test 3: department insert ===");
+        Department newDep = new Department(null, "Internet");
+        depDao.insert(newDep);
+        IO.println("inserted! New id = " + newDep.getId());
     }
 }
